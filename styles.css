@@ -1,0 +1,92 @@
+body {
+  transition: background-color 0.5s ease;
+  text-align: center;
+}
+
+/* Theme Styles */
+body.light-theme {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body.dark-theme {
+  background-color: #222;
+  color: #fff;
+}
+
+body.blue-theme {
+  background-color: #007bff;
+  color: #fff;
+}
+
+body.green-theme {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-bottom: 20px;
+}
+
+.theme-toggle input[type="checkbox"] {
+  display: none;
+}
+
+.theme-toggle label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.theme-toggle label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.theme-toggle input:checked + label {
+  background-color: #2196F3;
+}
+
+.theme-toggle input:checked + label:before {
+  transform: translateX(26px);
+}
+
+#theme-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-button:hover {
+  background-color: #0056b3;
+}
